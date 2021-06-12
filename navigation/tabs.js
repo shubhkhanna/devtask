@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Home, Search, Create, Community, Profile} from '../screens';
 import {TabBarIcon} from '../components';
@@ -14,9 +13,9 @@ const Tabs = () => {
       tabBarOptions={{
         showLabel: false,
         style: {
-          elevation: 0,
           height: 70,
           backgroundColor: COLORS.smokeWhite,
+          borderTopColor: 'transparent',
         },
       }}>
       <Tab.Screen
