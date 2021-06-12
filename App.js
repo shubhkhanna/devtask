@@ -1,11 +1,19 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Tabs from './navigation/tabs';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{headerShown: false}}
+        initialRouteName={'App'}>
+        <Stack.Screen name="App" component={Tabs} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
