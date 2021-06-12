@@ -27,11 +27,13 @@ export const SIZES = {
   h3: 16,
   h4: 14,
   h5: 12,
+  h6: 10,
   body1: 30,
   body2: 22,
   body3: 16,
   body4: 14,
   body5: 12,
+  body6: 10,
 };
 
 export const FONTS = {
@@ -41,6 +43,7 @@ export const FONTS = {
   h3: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h3, lineHeight: 22},
   h4: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h4, lineHeight: 22},
   h5: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h5, lineHeight: 22},
+  h6: {fontFamily: 'Roboto-Bold', fontSize: SIZES.h6, lineHeight: 22},
   body1: {
     fontFamily: 'Roboto-Regular',
     fontSize: SIZES.body1,
@@ -64,6 +67,11 @@ export const FONTS = {
   body5: {
     fontFamily: 'Roboto-Regular',
     fontSize: SIZES.body5,
+    lineHeight: 22,
+  },
+  body6: {
+    fontFamily: 'Roboto-Regular',
+    fontSize: SIZES.body6,
     lineHeight: 22,
   },
 };
