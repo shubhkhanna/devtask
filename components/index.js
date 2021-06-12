@@ -1,3 +1,4 @@
 import TabBarIcon from './TabBarIcon';
+import MainLayout from './MainLayout';
 
-export {TabBarIcon};
+export {TabBarIcon, MainLayout};
