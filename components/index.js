@@ -6,6 +6,7 @@ import SearchBar from './SearchBar';
 import Cards from './Cards';
 import Lists from './Lists';
 import Post from './Post';
+import SectionBanner from './SectionBanner';
 
 export {
   TabBarIcon,
@@ -16,4 +17,5 @@ export {
   Cards,
   Lists,
   Post,
+  SectionBanner,
 };
