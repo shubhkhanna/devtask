@@ -7,6 +7,7 @@ import {
   SectionTitle,
   SearchBar,
   Lists,
+  SectionBanner,
 } from '../components';
 
 const Search = ({navigation}) => {
@@ -23,6 +24,9 @@ const Search = ({navigation}) => {
 
         {/* Search Bar */}
         <SearchBar />
+
+        {/* Top Search*/}
+        <SectionBanner />
 
         {/* Trending Hashtags Section */}
         <SectionTitle title="Trending hashtags" seeAll={true} />
