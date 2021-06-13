@@ -11,7 +11,7 @@ const SearchBar = () => {
         flexDirection: 'row',
         height: 50,
         alignItems: 'center',
-        marginVertical: SIZES.radius,
+        marginTop: SIZES.radius,
         marginHorizontal: SIZES.padding,
         paddingHorizontal: SIZES.radius,
         borderRadius: SIZES.radius,
