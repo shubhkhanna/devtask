@@ -8,6 +8,7 @@ import {
   SearchBar,
   Lists,
   SectionBanner,
+  NomadsList,
 } from '../components';
 
 const Search = ({navigation}) => {
@@ -38,6 +39,7 @@ const Search = ({navigation}) => {
 
         {/* Top nomads */}
         <SectionTitle title="Top nomads" seeAll={true} />
+        <NomadsList data={dummyData.topNomads} />
       </ScrollView>
     </MainLayout>
   );
