@@ -7,6 +7,7 @@ import Cards from './Cards';
 import Lists from './Lists';
 import Post from './Post';
 import SectionBanner from './SectionBanner';
+import NomadsList from './NomadsList';
 
 export {
   TabBarIcon,
@@ -18,4 +19,5 @@ export {
   Lists,
   Post,
   SectionBanner,
+  NomadsList,
 };
