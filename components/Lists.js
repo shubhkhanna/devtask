@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useCallback, useMemo} from 'react';
 import {View, FlatList} from 'react-native';
 import {SIZES} from '../constants';
 import {Cards} from './';
 
 const Lists = ({data}) => {
+  const renderItem = useCallback(({item}) => <Cards details={item} />, []);
+
+  const memoizedValue = useMemo(() => renderItem, [data]);
+
   return (
     <View
       style={{
@@ -16,9 +20,7 @@ const Lists = ({data}) => {
         showsHorizontalScrollIndicator={false}
         data={data}
         keyExtractor={item => `${item.id}`}
-        renderItem={({item, i}) => {
-          return <Cards details={item} />;
-        }}
+        renderItem={memoizedValue}
       />
     </View>
   );

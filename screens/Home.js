@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import {FlatList} from 'react-native';
 import axios from 'axios';
 import {MainLayout, Post} from '../components';
@@ -9,12 +9,17 @@ const Home = () => {
 
   useEffect(() => {
     const fetchFeeds = async () => {
+      // fetching post
       const {data} = await axios.get('https://picsum.photos/v2/list?limit=10');
       setProperties(data);
     };
 
     fetchFeeds();
   }, []);
+
+  const renderItem = useCallback(({item}) => <Post post={item} />, []);
+
+  const memoizedValue = useMemo(() => renderItem, [properties]);
 
   return (
     <MainLayout containerStyle={{flexDirection: 'column'}}>
@@ -26,7 +31,8 @@ const Home = () => {
         decelerationRate="normal"
         snapToInterval={SIZES.height - 70}
         keyExtractor={item => `${item.id}`}
-        renderItem={({item}) => <Post post={item} />}
+        renderItem={memoizedValue}
+        max
       />
     </MainLayout>
   );
